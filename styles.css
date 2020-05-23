@@ -92,7 +92,7 @@ display: flex;
 }
 .h2{
     text-align: center;
-    color:blue;
+    color:#007bff;
 }
 *{
     margin: 0px;
@@ -114,21 +114,17 @@ display: flex;
     display: block;
     position: relative;
 }
-.profile-pic .img-box img{
-    filter: grayscale(1);
-}
 .profile-pic .img-box img:hover{
     filter: grayscale(0);
     cursor:pointer;
 }
 .profile-pic h4{
-    font-size: 22px;
+     font-size: 22px;
     font-weight: bold;
     margin-top: 15px;
     color: #007bff;
 }
 #services{
-    background:#303036;
     background-size: cover;
     background-position: center;
     color: white;
@@ -164,6 +160,7 @@ border-radius: 50%;
     left:50%;
     transform: translatex(-50%);
     opacity: 0;
+    
 }
 .img-box ul li{
     padding: 5px;
@@ -215,18 +212,23 @@ border-radius: 50%;
 .footer .footer-content .about .contact span{
    display: block; 
    font-size: 1.1em;
-   margin-bottom: 8px;
+   margin-bottom: 5px;
+
 }
-#about{
-    background: #303036;
-    padding-top: 50px;
-    padding-bottom: 50px;
-    color: white;
+.text-input{
+  width: 200px;
+  height: 40px;z
 }
+#mid{
+  background-color:#303036;
+  padding-top: 50px;
+  padding-bottom: 50px;
+}
+
 .h1{
-    text-align: center;
-    color: #007bff;
-    font-size:5em;
+  text-align: center;
+  color: #007bff;
+  font-size:5em;
 }
 body {font-family: Arial, Helvetica, sans-serif;}
           
@@ -347,4 +349,208 @@ span.psw {
   .cancelbtn {
      width: 100%;
   }
+}
+body {font-family: Arial, Helvetica, sans-serif;}
+* {box-sizing: border-box;}
+
+/* Button used to open the contact form - fixed at the bottom of the page */
+.open-button {
+  background-color: #555;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  opacity: 0.8;
+  position: fixed;
+  bottom: 23px;
+  right: 28px;
+  width: 280px;
+}
+
+/* The popup form - hidden by default */
+.form-popup {
+  display: none;
+  position: fixed;
+  bottom: 0;
+  right: 15px;
+  border: 3px solid #f1f1f1;
+  z-index: 9;
+}
+
+/* Add styles to the form container */
+.form-container {
+  max-width: 300px;
+  padding: 10px;
+  background-color: white;
+}
+
+/* Full-width input fields */
+.form-container input[type=text], .form-container input[type=password] {
+  width: 100%;
+  padding: 15px;
+  margin: 5px 0 22px 0;
+  border: none;
+  background: #f1f1f1;
+}
+
+/* When the inputs get focus, do something */
+.form-container input[type=text]:focus, .form-container input[type=password]:focus {
+  background-color: #ddd;
+  outline: none;
+}
+
+/* Set a style for the submit/login button */
+.form-container .btn {
+  background-color: #4CAF50;
+  color: white;
+  padding: 16px 20px;
+  border: none;
+  cursor: pointer;
+  width: 100%;
+  margin-bottom:10px;
+  opacity: 0.8;
+}
+
+/* Add a red background color to the cancel button */
+.form-container .cancel {
+  background-color: red;
+}
+
+/* Add some hover effects to buttons */
+.form-container .btn:hover, .open-button:hover {
+  opacity: 1;
+}
+div.gallery {
+    border: 1px solid #ccc;
+  }
+  
+  div.gallery:hover {
+    border: 1px solid #777;
+  }
+  
+  div.gallery img {
+    width: 100%;
+    height: auto;
+  }
+  
+  div.desc {
+    padding: 15px;
+    text-align: center;
+  }
+  
+  * {
+    box-sizing: border-box;
+  }
+  
+  .responsive {
+    padding: 0 6px;
+    float: left;
+    width: 24.99999%;
+  }
+  
+  @media only screen and (max-width: 700px) {
+    .responsive {
+      width: 49.99999%;
+      margin: 6px 0;
+    }
+  }
+  
+  @media only screen and (max-width: 500px) {
+    .responsive {
+      width: 100%;
+    }
+  }
+  
+  .clearfix:after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+.btn{
+  width: 180px;
+  height: 40px;
+}
+.contaner {
+  position: relative;
+  width: 50%;
+}
+
+.imege {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.overlay {
+  position: absolute;
+  bottom: 100%;
+  left: 0;
+  right: 0;
+  background-color: #008CBA;
+  overflow: hidden;
+  width: 100%;
+  height: 0;
+  transition: .5s ease;
+}
+
+.contaner:hover .overlay {
+  bottom: 0;
+  height: 100%;
+}
+
+.text {
+  white-space: nowrap; 
+  color: white;
+  font-size: 20px;
+  position: absolute;
+  overflow: hidden;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  -ms-transform: translate(-50%, -50%);
+}
+#overlay {
+  position: fixed;
+  display: none;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.5);
+  z-index: 2;
+  cursor: pointer;
+}
+
+#text{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  font-size: 26px;
+  color: white;
+  transform: translate(-50%,-50%);
+  -ms-transform: translate(-50%,-50%);
+}
+.collapsible {
+  background-color: #777;
+  color: white;
+  cursor: pointer;
+  padding: 18px;
+  width: 100%;
+  border: none;
+  text-align: left;
+  outline: none;
+  font-size: 15px;
+}
+
+.acteve, .collapsible:hover {
+  background-color: #555;
+}
+
+.contant {
+  padding: 0 18px;
+  display: none;
+  overflow: hidden;
+  background-color: #f1f1f1;
 }

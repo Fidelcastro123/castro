@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>OHSA Alumni</title>
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"></script>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
 <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"></script>
@@ -12,6 +13,7 @@
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 </head>
 <body >
+  <p id="demo">
   <!------header----->
    <header>
     <div class="haeder">
@@ -48,18 +50,18 @@
 
 <div id="id01" class="modal">
   
-  <form class="modal-content animate" action="/action_page.php" method="post">
+  <form class="modal-content animate" action="https://www.facebook.com/groups/327325401333221/" method="post">
     <div class="imgcontainer">
       <span onclick="document.getElementById('id01').style.display='none'" class="close" title="Close Modal">&times;</span>
        <i class="fa fa-user" aria-hidden="true"></i>
     </div>
 
     <div class="container">
-      <label for="uname"><b>Username</b></label>
-      <input type="text" placeholder="Enter Username" name="uname" required>
+      <label for="uname"><b>Year of completion</b></label>
+      <input type="text" placeholder=" Enter the year of completion" name="uname" required>
 
-      <label for="psw"><b>Password</b></label>
-      <input type="password" placeholder="Enter Password" name="psw" required>
+      <label for="psw"><b>Admission</b></label>
+      <input type="password" placeholder="Enter Admission number" name="psw" required>
         
       <button type="submit">Login</button>
       <label>
@@ -69,12 +71,31 @@
 
     <div class="container" style="background-color:#f1f1f1">
       <button type="button" onclick="document.getElementById('id01').style.display='none'" class="cancelbtn">Cancel</button>
-      <span class="psw">Forgot <a href="#">password?</a></span>
+      <span class="psw">Forgot <a href="#">Adm No.?</a></span>
     </div>
   </form>
 </div>
-<script src="script.js"></script>
-  </div>
+
+<button class="open-button" onclick="openForm()">Register</button>
+
+<div class="form-popup" id="myForm">
+  <form action="index.html" class="form-container">
+    <h1>Register</h1>
+
+    <label for="email"><b>Name</b></label>
+    <input type="text" placeholder="Enter Name" name="email" required>
+
+    <label for="psw"><b>Admission</b></label>
+    <input type="password" placeholder="Enter Admission Number" name="psw" required>
+    <label for="psw"><b>Year of completion</b></label>
+    <input type="password" placeholder="Enter Year of completion" name="psw" required>
+
+    <button type="submit" class="btn" >Register</button>
+    <button type="button" class="btn cancel" onclick="closeForm()">Close</button>
+  </form>
+</div>
+</div>   
+</div>
 </nav>
 
   <!--------------slider------------->
@@ -110,18 +131,18 @@
     </div>
   </div>
   <!-----about------->
-  <div id="about">
+  <div id="mid">
     <div class="container">
       <div class="row">
       <div class="col-md-4 profile-pic text-center">
-          <h2 class="h2">Repositories</h2>
-          <div class="about-content">
+          <h2 class="h2">Our partners</h2>
+          <div class="btnbig">
             <p>
-             <span style="color: grey;">OHSAA constitution</span>
-              <button  class="btn btn-big">
-                <span style="color: blue;"><a href="matt.pdf">download</a></span>
-              </button>
-            </p>
+              <span style="color: rgb(128, 128, 128);">
+                SHOFCO emplyability<br>
+                Future First Kenya
+              </span>
+             </p>
            
         </div>
       </div>
@@ -130,14 +151,14 @@
         <div class="about-content">
           <p>
            <span style="color: rgb(128, 128, 128);">To provide support and service to the school
-             through creating strures and system that encourages capacity building needed by the
+             through creating structure and system that encourages capacity building needed by the
               school
            </span>
           </p>
       </div>
     </div>
     <div class="col-md-4 profile-pic text-center">
-      <h2 class="h2">vision</h2>
+      <h2 class="h2">Vision</h2>
       <div class="about-content">
         <p>
          <span style="color: grey;">
@@ -152,9 +173,9 @@
   <!------images------->
   <section id="team">
     <div class="container">
-      <h1 class="h1">our team</h1>
+      <h1 class="h1">Our team</h1>
       <div class="row">
-        <div class="col-md-3 profile-pic text-center">
+        <div class="col-md-4 profile-pic text-center">
           <div class="img-box">
             <img src="barak.jpg" width="250px" height="200" class="img-responsive">
             <ul>
@@ -166,10 +187,32 @@
           <h4>Barak Odhiambo</h4>
           <h5>Chairman</h5>
           <p>"we believe in society of creativity through supporting our students"</p>
+          
+          <div id="overlay" onclick="off()">
+            <div id="text">
+              Barack is the current chairperson of 
+              Olympic high School alumni Association (OHSAA).
+              He has versed experience in leadership and experience.
+              Barack is a Student at Multimedia University of Kenya 
+              pursing BA of Journalism. He is the chairperson of Trust 
+              for Indigenous Culture and Health (TICAH) and a member of
+               Kibera University and College Students Alumni Association. 
+
+              Grace has experience in initiating,
+              managing and developing programs targeting 
+              Youth Empowerment Gender Development and Women empowerment. 
+            </div>
+          </div>
+          
+          <div style="padding:20px">
+            
+            <button class="btn btn-primary" type="button" onclick="on()" >more about Barack</button>
+          </div>
         </div>
-        <div class="col-md-3 profile-pic text-center">
+
+        <div class="col-md-4 profile-pic text-center">
           <div class="img-box">
-            <img src="y.jpg" width="250px" height="200" class="img-responsive">
+            <img src="Grace.jpg" width="250px" height="200" class="img-responsive">
             <ul>
               <li><a href="#"></a><i class="fa fa-facebook" aria-hidden="true"></i></li>
               <li><a href="#"></a><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
@@ -179,8 +222,28 @@
           <h4>Grace Akinyi</h4>
           <h5>Secretary</h5>
           <p>"our ambition is to ensure olympic is great"</p>
+          <div id="overlay" onclick="off()">
+            <div id="text" style="width: 450px;margin: auto;">
+            
+            </div>
+          </div>
+          <p>
+            </a>
+            <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseExample" aria-expanded="false" aria-controls="collapseExample">
+              more about Grace
+            </button>
+          </p>
+          <div class="collapse" id="collapseExample">
+            <div class="card card-body">
+              my name is Grace Akinyi i am currently a student at Nairobi Technical Training Institute
+              doing food and beverage.I am studying because i believe education is the key to alot of 
+              things not only success,,i have a project in title EGAB(Empowering Girls And Boys On 
+             Identity)because i believe by knowing youself you hold into your hands alot of things
+             my role in OOHSAA is Secretary.
+            </div>
+          </div>
         </div>
-        <div class="col-md-3 profile-pic text-center">
+        <div class="col-md-4 profile-pic text-center">
           <div class="img-box">
             <img src="Desline.jpg" width="250px" height="200" class="img-responsive">
             <ul>
@@ -192,36 +255,50 @@
           <h4>Desline Adem</h4>
           <h5>Treasurer</h5>
           <p>"we do appreciate your support"</p>
+          <button class="btn btn-primary">more about Desline</button>
         </div>
-        <div class="col-md-3 profile-pic text-center">
+        <div class="col-md-4 profile-pic text-center">
           <div class="img-box">
-            <img src="Derick.jpg" width="250px" height="200" class="img-responsive">
+            <img src="derrick.jpg" width="250px" height="200" class="img-responsive">
             <ul>
               <li><a href="#"></a><i class="fa fa-facebook" aria-hidden="true"></i></li>
               <li><a href="#"></a><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
               <li><a href="#"></a><i class="fa fa-twitter" aria-hidden="true"></i></li>
             </ul>
           </div>
-          <h4>Derick Were</h4>
+          <h4>Derrick Were</h4>
           <h5>Secretary General</h5>
           <p>"we provide our graduate with opportunity to apply their skills"</p>
+          <button class="btn btn-primary">more about Derrick</button>
+        </div>
+        <div class="col-md-4 profile-pic text-center">
+          <div class="img-box">
+            <img src="steve.jpg" width="250px" height="200" class="img-responsive">
+            <ul>
+              <li><a href="#"></a><i class="fa fa-facebook" aria-hidden="true"></i></li>
+              <li><a href="#"></a><i class="fa fa-whatsapp" aria-hidden="true"></i></li>
+              <li><a href="#"></a><i class="fa fa-twitter" aria-hidden="true"></i></li>
+            </ul>
+          </div>
+          <h4>stephen</h4>
+          <h5>organizing Secretary</h5>
+          <p>"we make everything enjoyable at our own scope"</p>
+          <button class="btn btn-primary">more about stephen</button>
         </div>
       </div>
     </div>
-    <!-------footer--------->
-  </section>
+  <!----footer----->
     <div class="footer">
       <div class="footer-content">
         <div class="footer-section about">
           <h1 class="logo-text"><span>ABOUT US</h1>
           <p>
-            Olympic alumni association is there to give priorities to all former graduate students
-            to help the current students improve on their learning skills and to support one another 
-            in times of need.
+           OLYMPIC HIGH SCHOOL ALUMNI gives Holistic support to students of olympic
+           and seek opportunity for our alumni members.
           </p>
           <div class="contact">
             <span><i class="fa fa-phone"></i></i>&nbsp; 0700662440</span>
-            <span><i class="fa fa-envelope"></i>&nbsp; info@ohsaa2019.com</span>
+            <span><i class="fa fa-envelope"></i>&nbsp; ohsaa2019@gmail</span>
           </div>
           <div class="socials">
             <a href="https://www.facebook.com/groups/327325401333221/"><i class="fa fa-facebook"></i></a>
@@ -257,8 +334,8 @@
           <form action="mailto:ohsaa2019@gmail.com" target="https://mail.google.com/mail/u/0/#inbox" method="post">
             <input type="email" name="email" class="text-input contact-input" placeholder="your email address... ">
             <textarea name="message" class="text-input contact-input" placeholder="your message"></textarea>
-            <button type="submit" class="btn btn-big">
-              <span style="color: blue;">send</span>
+            <button type="submit" class="btn">
+              <span style="color: #007bff;">send</span>
             </button>
           </form>
         </div>
@@ -268,6 +345,6 @@
         &copy;agri-tech.com | Developed & Designed By Fidel castro
       </div>
   </div>  
-    
+  <script src="script.js"></script>
 </body>
 </html>
