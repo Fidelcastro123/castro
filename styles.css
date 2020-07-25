@@ -217,7 +217,7 @@ border-radius: 50%;
 }
 .text-input{
   width: 200px;
-  height: 40px;z
+  height: 40px;
 }
 #mid{
   background-color:#303036;
@@ -553,7 +553,6 @@ h1{
 }
 .image{
   text-align: center;
-  display: inline-block;
   float: left;
   width: 33%;
 }
